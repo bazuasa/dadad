@@ -1,0 +1,218 @@
+:root {
+  --bg-main: #0a0912;
+  --bg-card: rgba(25, 22, 38, 0.85);
+  --gold: #d6b25e;
+  --gold-soft: rgba(214,178,94,.35);
+  --text-main: #f5f5f5;
+  --text-soft: #bdbdbd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background:
+    radial-gradient(circle at top, #1b1830, #0a0912 70%),
+    url("https://www.transparenttextures.com/patterns/stardust.png");
+  color: var(--text-main);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+
+header p {
+  color: var(--text-soft);
+  margin-top: 10px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h2 {
+  font-size: 1.9rem;
+  max-width: 720px;
+  margin: auto;
+}
+
+.hero p {
+  margin-top: 12px;
+  color: var(--text-soft);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 16px 48px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f0d27a, #c6a343);
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(214,178,94,.35);
+  transition: .4s;
+}
+
+.cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(214,178,94,.6);
+}
+
+/* SECTION */
+section h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 60px 0 40px;
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 40px 80px;
+}
+
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 30px 26px;
+  text-align: center;
+  border: 1px solid var(--gold-soft);
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  transition: .45s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.08), transparent);
+  opacity: 0;
+  transition: .4s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 35px 80px rgba(0,0,0,.9);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.card span {
+  display: block;
+  margin: 14px 0 22px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.card button {
+  background: linear-gradient(135deg, #f0d27a, #c6a343);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.card button:hover {
+  transform: scale(1.05);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.hidden { display: none; }
+
+form {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border-radius: 26px;
+  padding: 34px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid var(--gold-soft);
+}
+
+form h3 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  background: rgba(10,9,18,.8);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 14px;
+  padding: 12px;
+  color: white;
+}
+
+form button {
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--text-soft);
+  opacity: .8;
+}
+.card,
+.card * {
+  pointer-events: auto;
+}
+
+.card::before {
+  pointer-events: none;
+}
+
+.cards {
+  position: relative;
+  z-index: 1;
+}
+
+.modal {
+  z-index: 9999;
+}
