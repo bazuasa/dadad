@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarot & Oráculos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Tarot & Oráculos</h1>
+  <p>Atendimento espiritual premium</p>
+</header>
+
+<section class="hero">
+  <h2>Orientação espiritual com elegância e verdade</h2>
+  <p>✨ Respostas enviadas exclusivamente via WhatsApp ✨</p>
+  <a href="#servicos" class="cta">Ver Leituras</a>
+</section>
+
+<section class="cards">
+
+  <div class="card" data-leitura="Perguntas de sim ou não - R$6,00">
+    <h3>Perguntas de sim ou não</h3>
+    <p>Respostas objetivas e diretas</p>
+    <span>R$6,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Perguntas explicativas - R$10,00">
+    <h3>Perguntas explicativas</h3>
+    <p>Respostas detalhadas e profundas</p>
+    <span>R$10,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Conselho do baralho - R$12,00">
+    <h3>Conselho do baralho</h3>
+    <p>Orientação espiritual do momento</p>
+    <span>R$12,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Leitura mensal - R$14,00">
+    <h3>Leitura mensal</h3>
+    <p>Energia e previsões do mês</p>
+    <span>R$14,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Leitura Amorosa - R$25,00">
+    <h3>Leitura Amorosa</h3>
+    <p>Relacionamentos e sentimentos</p>
+    <span>R$25,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Taça do amor - R$20,00">
+    <h3>Taça do amor</h3>
+    <p>Energia afetiva do consulente</p>
+    <span>R$20,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Ficar ou Partir - R$18,00">
+    <h3>Ficar ou Partir</h3>
+    <p>Decisões importantes do coração</p>
+    <span>R$18,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Conselhos semanais - R$14,00">
+    <h3>Conselhos semanais</h3>
+    <p>Direcionamento para a semana</p>
+    <span>R$14,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Templo de Afrodite - R$20,00">
+    <h3>Templo de Afrodite</h3>
+    <p>Amor, autoestima e magnetismo</p>
+    <span>R$20,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Templo dos segredos - R$20,00">
+    <h3>Templo dos Segredos</h3>
+    <p>Revelações ocultas</p>
+    <span>R$20,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Templo de Ártemis - R$20,00">
+    <h3>Templo de Ártemis</h3>
+    <p>Força, proteção e foco</p>
+    <span>R$20,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Trindade da luz - R$10,00">
+    <h3>Trindade da Luz</h3>
+    <p>Equilíbrio espiritual</p>
+    <span>R$10,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+  <div class="card" data-leitura="Confiança - R$10,00">
+    <h3>Confiança</h3>
+    <p>Clareza e segurança interior</p>
+    <span>R$10,00</span>
+    <button class="btn-agendar" type="button">Agendar</button>
+  </div>
+
+</section>
+
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+  <form id="form">
+    <h3>Agendar leitura</h3>
+
+    <input id="nome" placeholder="Nome completo" required>
+    <input id="email" type="email" placeholder="E-mail" required>
+    <input id="whatsapp" placeholder="WhatsApp com DDD" required>
+    <input id="leitura" readonly>
+    <textarea id="mensagem" placeholder="Sua pergunta" required></textarea>
+
+    <button>Enviar pedido</button>
+    <p id="msg"></p>
+  </form>
+</div>
+
+<footer>
+  © Tarot & Oráculos • Atendimento com sigilo e respeito
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
